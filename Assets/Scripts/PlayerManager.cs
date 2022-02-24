@@ -28,17 +28,27 @@ public class PlayerManager : MonoBehaviour
         {
             for (int i = 1; i < list_balls.Count; i++)
             {
-                Transform firstBall = list_balls[i - 1];
-                Transform secondBall = list_balls[i];
+                Transform front = list_balls[i - 1];
+                Transform back = list_balls[i];
 
-                float desiredDistance = Vector3.Distance(secondBall.position, firstBall.position);
+                float desiredDistance = Vector3.Distance(back.position, front.position);
 
                 if (desiredDistance <= ballDistance)
                 {
-                    secondBall.position = new Vector3(Mathf.Lerp(
-                        secondBall.position.x, firstBall.position.x, 10 * Time.deltaTime),
-                        secondBall.position.y,
-                        Mathf.Lerp(secondBall.position.z, firstBall.position.z - 0.5f, 10 * Time.deltaTime));
+                    back.position = new Vector3(Mathf.Lerp(
+                        back.position.x, front.position.x, 10 * Time.deltaTime),
+                        back.position.y,
+                        Mathf.Lerp(back.position.z, front.position.z - 0.5f, 10 * Time.deltaTime));
+
+                    //secondBall.position = new Vector3(Mathf.Lerp(
+                    // secondBall.position.x, firstBall.position.x, 10 * Time.deltaTime),
+                    // secondBall.position.y,
+                    // firstBall.position.z - 0.5f);
+
+                    //secondBall.position = new Vector3(
+                    //    secondBall.position.x,
+                    //    secondBall.position.y,
+                    //    Mathf.Lerp(secondBall.position.z, firstBall.position.z - 0.5f, 10 * Time.deltaTime));
                 }
             }
         }
@@ -76,7 +86,7 @@ public class PlayerManager : MonoBehaviour
     {
         list_balls[0].gameObject.SetActive(false);
         list_balls.RemoveAt(0);
-        list_balls[0].transform.SetParent(MovePlayer.movePlayerInstance.transform);
+        list_balls[0].transform.SetParent(transform);
         list_balls[0].GetComponent<Balls>().isPlayer = true;
 
         Debug.Log("removing ball");

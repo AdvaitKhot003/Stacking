@@ -21,11 +21,16 @@ public class Balls : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Ball"))
             {
-                playerManager.AddSingleBall(other.gameObject);
+                if (!other.GetComponent<Balls>().isUsed)
+                {
+                    other.GetComponent<Balls>().isUsed = true;
+                    playerManager.AddSingleBall(other.gameObject);
+                }
             }
 
             if (other.transform.CompareTag("GreenDoor"))
             {
+
                 playerManager.AddMultipleBalls(other.gameObject);
             }
         }

@@ -10,8 +10,6 @@ public class MovePlayer : MonoBehaviour
     [SerializeField]
     private InputAction touchInput;
 
-    public static MovePlayer movePlayerInstance;
-
     [SerializeField]
     private float rayDistance = 20f;
 
@@ -46,7 +44,6 @@ public class MovePlayer : MonoBehaviour
     private void Awake()
     {
         Application.targetFrameRate = 60;
-        movePlayerInstance = this;
         mainCamera = Camera.main;
         mainPlayer = transform;
     }
