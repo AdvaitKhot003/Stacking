@@ -17,28 +17,30 @@ public class Balls : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!isPlayer)
-            return;
-
-        if (other.gameObject.CompareTag("Ball"))
+        if (isPlayer)
         {
-            playerManager.AddSingleBall(other.gameObject);
+            if (other.gameObject.CompareTag("Ball"))
+            {
+                playerManager.AddSingleBall(other.gameObject);
+            }
+
+            if (other.transform.CompareTag("GreenDoor"))
+            {
+                playerManager.AddMultipleBalls(other.gameObject);
+            }
+        }
+      
+
+        if (other.transform.CompareTag("RedDoor"))
+        {
+            playerManager.RemoveBalls(1);
+            other.gameObject.GetComponent<RedGate>().ReduceHealth();
         }
 
-        if (other.transform.CompareTag("GreenDoor"))
-        {
-            playerManager.AddMultipleBalls(other.gameObject);
-        }
-
-        if (other.transform.CompareTag("RedDoor") && playerManager.list_balls.Count > 0)
-        {
-            playerManager.RemoveBalls(other.gameObject);
-        }
-
-        if (playerManager.list_balls.Count == 0)
-        {
-            MovePlayer.movePlayerInstance.startGame = false;
-            Time.timeScale = 0;
-        }
+        //if (playerManager.list_balls.Count == 0)
+        //{
+        //    MovePlayer.movePlayerInstance.startGame = false;
+        //    Time.timeScale = 0;
+        //}
     }
 }

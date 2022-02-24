@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 157514815}
   - component: {fileID: 157514814}
   - component: {fileID: 157514813}
+  - component: {fileID: 157514816}
   m_Layer: 0
   m_Name: RedGate (1)
   m_TagString: RedDoor
@@ -473,7 +474,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157514811}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -525,6 +526,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157514811}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &157514816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157514811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3260f0f970586485cb145a3943f442af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!1 &176555784
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +551,7 @@ GameObject:
   - component: {fileID: 176555787}
   - component: {fileID: 176555786}
   - component: {fileID: 176555785}
+  - component: {fileID: 176555789}
   m_Layer: 0
   m_Name: RedGate
   m_TagString: RedDoor
@@ -552,7 +567,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176555784}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -619,6 +634,19 @@ Transform:
   m_Father: {fileID: 1587900884}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &176555789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176555784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3260f0f970586485cb145a3943f442af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!1 &370730132
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +754,7 @@ GameObject:
   - component: {fileID: 427482768}
   - component: {fileID: 427482767}
   - component: {fileID: 427482770}
+  - component: {fileID: 427482771}
   m_Layer: 0
   m_Name: Ball (9)
   m_TagString: Ball
@@ -821,6 +850,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+--- !u!54 &427482771
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427482765}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &456523048
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +879,7 @@ GameObject:
   - component: {fileID: 456523051}
   - component: {fileID: 456523050}
   - component: {fileID: 456523053}
+  - component: {fileID: 456523054}
   m_Layer: 0
   m_Name: Ball (7)
   m_TagString: Ball
@@ -929,6 +975,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+--- !u!54 &456523054
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456523048}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &459091094
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +1056,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459091094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.46, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1133283720}
@@ -1017,6 +1079,7 @@ MonoBehaviour:
   ballDistance: 10
   newBall: {fileID: 6592489926380956040, guid: 15f815f7ea6a7ca4bb77dd826661a77a, type: 3}
   playerColor: {r: 1, g: 0.121568635, b: 0.9803922, a: 1}
+  firstBall: {fileID: 1133283716}
 --- !u!1 &462062422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1123,7 @@ GameObject:
   - component: {fileID: 580903561}
   - component: {fileID: 580903560}
   - component: {fileID: 580903563}
+  - component: {fileID: 580903564}
   m_Layer: 0
   m_Name: Ball (6)
   m_TagString: Ball
@@ -1155,6 +1219,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+--- !u!54 &580903564
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580903558}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &622150651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1370,7 @@ GameObject:
   - component: {fileID: 749899287}
   - component: {fileID: 749899286}
   - component: {fileID: 749899289}
+  - component: {fileID: 749899290}
   m_Layer: 0
   m_Name: Ball (8)
   m_TagString: Ball
@@ -1385,6 +1466,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+--- !u!54 &749899290
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749899284}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &897892506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1673,7 @@ GameObject:
   - component: {fileID: 985320986}
   - component: {fileID: 985320985}
   - component: {fileID: 985320988}
+  - component: {fileID: 985320989}
   m_Layer: 0
   m_Name: Ball (3)
   m_TagString: Ball
@@ -1671,6 +1769,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+--- !u!54 &985320989
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985320983}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1133283716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,7 +1801,7 @@ GameObject:
   - component: {fileID: 1133283721}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1809,6 +1923,7 @@ GameObject:
   - component: {fileID: 1287734220}
   - component: {fileID: 1287734219}
   - component: {fileID: 1287734222}
+  - component: {fileID: 1287734223}
   m_Layer: 0
   m_Name: Ball (2)
   m_TagString: Ball
@@ -1904,6 +2019,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+--- !u!54 &1287734223
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287734217}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1587900883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,6 +2092,7 @@ GameObject:
   - component: {fileID: 1655167509}
   - component: {fileID: 1655167508}
   - component: {fileID: 1655167507}
+  - component: {fileID: 1655167510}
   m_Layer: 0
   m_Name: GreenGate (1)
   m_TagString: GreenDoor
@@ -1991,7 +2123,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655167505}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2043,6 +2175,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655167505}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1655167510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655167505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 181ceadce73ee4903845cc54f736f4ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1687007862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,6 +2200,7 @@ GameObject:
   - component: {fileID: 1687007865}
   - component: {fileID: 1687007864}
   - component: {fileID: 1687007867}
+  - component: {fileID: 1687007868}
   m_Layer: 0
   m_Name: Ball (5)
   m_TagString: Ball
@@ -2151,6 +2296,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+--- !u!54 &1687007868
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687007862}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1775897482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2325,7 @@ GameObject:
   - component: {fileID: 1775897485}
   - component: {fileID: 1775897484}
   - component: {fileID: 1775897487}
+  - component: {fileID: 1775897488}
   m_Layer: 0
   m_Name: Ball (4)
   m_TagString: Ball
@@ -2259,6 +2421,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+--- !u!54 &1775897488
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775897482}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1835160898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,6 +2480,7 @@ GameObject:
   - component: {fileID: 1935501810}
   - component: {fileID: 1935501809}
   - component: {fileID: 1935501813}
+  - component: {fileID: 1935501814}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -2397,6 +2576,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+--- !u!54 &1935501814
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935501808}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2072099859
 GameObject:
   m_ObjectHideFlags: 0
@@ -2409,6 +2604,7 @@ GameObject:
   - component: {fileID: 2072099862}
   - component: {fileID: 2072099861}
   - component: {fileID: 2072099860}
+  - component: {fileID: 2072099864}
   m_Layer: 0
   m_Name: GreenGate
   m_TagString: GreenDoor
@@ -2424,7 +2620,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072099859}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2491,6 +2687,18 @@ Transform:
   m_Father: {fileID: 1587900884}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2072099864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072099859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 181ceadce73ee4903845cc54f736f4ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2145074372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,6 +2712,7 @@ GameObject:
   - component: {fileID: 2145074375}
   - component: {fileID: 2145074374}
   - component: {fileID: 2145074377}
+  - component: {fileID: 2145074378}
   m_Layer: 0
   m_Name: Ball (1)
   m_TagString: Ball
@@ -2599,3 +2808,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+--- !u!54 &2145074378
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145074372}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

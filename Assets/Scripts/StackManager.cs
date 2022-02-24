@@ -8,16 +8,16 @@ public class StackManager : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Ball"))
-        {
-            other.transform.parent = null;
-            other.gameObject.AddComponent<Rigidbody>().isKinematic = true;
-            other.gameObject.AddComponent<StackManager>();
-            other.gameObject.GetComponent<Collider>().isTrigger = true;
-            other.tag = gameObject.tag;
-            other.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
-            PlayerManager.playerManagerInstance.list_balls.Add(other.transform);
-        }
+//        if (other.gameObject.CompareTag("Ball"))
+//        {
+//            other.transform.parent = null;
+//            other.gameObject.AddComponent<Rigidbody>().isKinematic = true;
+//            other.gameObject.AddComponent<StackManager>();
+//            other.gameObject.GetComponent<Collider>().isTrigger = true;
+//            other.tag = gameObject.tag;
+//            other.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
+////            PlayerManager.playerManagerInstance.list_balls.Add(other.transform);
+//        }
 
         //if (other.transform.CompareTag("GreenDoor"))
         //{
