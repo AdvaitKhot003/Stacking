@@ -8,7 +8,7 @@ public class Balls : MonoBehaviour
 {
     PlayerManager playerManager;
 
-    public bool isPlayer, isUsed;
+    public bool isPlayer, isUsed, isDestroyed;
 
     private void Start()
     {
@@ -34,10 +34,13 @@ public class Balls : MonoBehaviour
             }
         }
 
-        if (other.transform.CompareTag("RedDoor"))
+        if (other.transform.CompareTag("RedDoor") && !isDestroyed)
         {
-            playerManager.RemoveBalls(1);
+            Debug.Log("destroying");
+            isDestroyed = true;
+            playerManager.RemoveBalls();
             other.gameObject.GetComponent<RedGate>().ReduceHealth();
+            playerManager.counter++;
         }
 
         //if (playerManager.list_balls.Count == 0)

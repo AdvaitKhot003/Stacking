@@ -421,7 +421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &147253912
 Transform:
   m_ObjectHideFlags: 0
@@ -466,6 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!135 &147253915
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -739,7 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3260f0f970586485cb145a3943f442af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 7
 --- !u!1 &204473437
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,7 +761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &204473438
 Transform:
   m_ObjectHideFlags: 0
@@ -805,6 +806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!135 &204473441
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1068,6 +1070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!54 &427482771
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1193,6 +1196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!54 &456523054
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1298,6 +1302,8 @@ MonoBehaviour:
   newBall: {fileID: 6592489926380956040, guid: 15f815f7ea6a7ca4bb77dd826661a77a, type: 3}
   playerColor: {r: 1, g: 0.121568635, b: 0.9803922, a: 1}
   firstBall: {fileID: 1133283716}
+  counter: 0
+  movePlayer: {fileID: 459091095}
 --- !u!1 &558108113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,7 +1324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &558108114
 Transform:
   m_ObjectHideFlags: 0
@@ -1363,6 +1369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!135 &558108117
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1443,7 +1450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &571900671
 Transform:
   m_ObjectHideFlags: 0
@@ -1488,6 +1495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!135 &571900674
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1657,6 +1665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!54 &580903564
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1874,6 +1883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!54 &749899290
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2004,7 +2014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &910652356
 Transform:
   m_ObjectHideFlags: 0
@@ -2049,6 +2059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!135 &910652359
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2302,6 +2313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!54 &985320989
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2338,7 +2350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1059318737
 Transform:
   m_ObjectHideFlags: 0
@@ -2383,6 +2395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!135 &1059318740
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2552,6 +2565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 1
   isUsed: 0
+  isDestroyed: 0
 --- !u!54 &1133283722
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2588,7 +2602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1155279128
 Transform:
   m_ObjectHideFlags: 0
@@ -2633,6 +2647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!135 &1155279131
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2802,6 +2817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!54 &1287734223
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2893,7 +2909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1588644375
 Transform:
   m_ObjectHideFlags: 0
@@ -2938,6 +2954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!135 &1588644378
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3214,6 +3231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!54 &1687007868
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3339,6 +3357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!54 &1775897488
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3375,7 +3394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1822095147
 Transform:
   m_ObjectHideFlags: 0
@@ -3420,6 +3439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!135 &1822095150
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3589,6 +3609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!54 &1935501814
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3625,7 +3646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1938064201
 Transform:
   m_ObjectHideFlags: 0
@@ -3670,6 +3691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!135 &1938064204
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3946,6 +3968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isUsed: 0
+  isDestroyed: 0
 --- !u!54 &2145074378
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -17,6 +17,10 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private GameObject firstBall;
 
+    public int counter;
+
+    public MovePlayer movePlayer;
+
     private void Start()
     {
         list_balls.Add(firstBall.transform);
@@ -38,20 +42,18 @@ public class PlayerManager : MonoBehaviour
                     back.position = new Vector3(Mathf.Lerp(
                         back.position.x, front.position.x, 10 * Time.deltaTime),
                         back.position.y,
-                        Mathf.Lerp(back.position.z, front.position.z - 0.5f, 10 * Time.deltaTime));
-
-                    //secondBall.position = new Vector3(Mathf.Lerp(
-                    // secondBall.position.x, firstBall.position.x, 10 * Time.deltaTime),
-                    // secondBall.position.y,
-                    // firstBall.position.z - 0.5f);
-
-                    //secondBall.position = new Vector3(
-                    //    secondBall.position.x,
-                    //    secondBall.position.y,
-                    //    Mathf.Lerp(secondBall.position.z, firstBall.position.z - 0.5f, 10 * Time.deltaTime));
+                        Mathf.Lerp(back.position.z, front.position.z - 0.8f, 20 * Time.deltaTime));
                 }
             }
         }
+
+        //if (list_balls.Count > 0)
+        //{
+        //    list_balls[0].transform.position = new Vector3(
+        //            list_balls[0].position.x,
+        //            list_balls[0].position.y,
+        //            Mathf.Lerp(list_balls[0].position.z, firstBall.transform.position.z , 10 * Time.deltaTime));
+        //}
     }
 
     public void AddSingleBall(GameObject ballToAdd)
@@ -80,13 +82,21 @@ public class PlayerManager : MonoBehaviour
         Debug.Log("Adding multiple balls");
     }
 
-    public void RemoveBalls(int ballsToRemove)
+    public void RemoveBalls()
     {
         list_balls[0].gameObject.SetActive(false);
         list_balls.RemoveAt(0);
-        list_balls[0].transform.SetParent(transform);
-        list_balls[0].GetComponent<Balls>().isPlayer = true;
 
+        movePlayer.MoveCamera();
+
+        if (list_balls.Count <= 0)
+        {
+            movePlayer.startGame = false;
+        }else
+        {
+            list_balls[0].transform.SetParent(transform);
+            list_balls[0].GetComponent<Balls>().isPlayer = true;
+        }
         Debug.Log("removing ball");
     }
 }

@@ -34,7 +34,7 @@ public class MovePlayer : MonoBehaviour
     private Transform path;
 
     [SerializeField]
-    private float pathZSpeed = 10f;
+    private float pathZSpeed = 2;
 
     public bool startGame;
 
@@ -75,6 +75,8 @@ public class MovePlayer : MonoBehaviour
 
             path.position = new Vector3(newPathPos.x, newPathPos.y,
                 Mathf.MoveTowards(path.position.z, newPathPos.z, pathZSpeed * Time.deltaTime));
+
+
         }
     }
 
@@ -100,6 +102,11 @@ public class MovePlayer : MonoBehaviour
                 StartCoroutine(DragUpdate());
             }
         }
+    }
+
+    public void MoveCamera()
+    {
+        mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z - 0.8f);
     }
 
     private IEnumerator DragUpdate()
