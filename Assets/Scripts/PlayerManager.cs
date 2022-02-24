@@ -65,11 +65,9 @@ public class PlayerManager : MonoBehaviour
         Debug.Log("Adding single ball");
     }
 
-    public void AddMultipleBalls(GameObject obj)
+    public void AddMultipleBalls(int ballsToAdd)
     {
-        Int16 addBalls = Int16.Parse(obj.transform.GetChild(0).name);
-
-        for (int i = 0; i < addBalls; i++)
+        for (int i = 0; i < ballsToAdd; i++)
         {
             GameObject ball = Instantiate(newBall, list_balls[list_balls.Count - 1].position +
                  new Vector3(0f, 0f, -0.5f), Quaternion.identity);
@@ -77,7 +75,7 @@ public class PlayerManager : MonoBehaviour
             list_balls.Add(ball.transform);
         }
 
-        obj.GetComponent<Collider>().enabled = false;
+      //  obj.GetComponent<Collider>().enabled = false;
 
         Debug.Log("Adding multiple balls");
     }

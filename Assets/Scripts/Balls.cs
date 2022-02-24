@@ -30,11 +30,9 @@ public class Balls : MonoBehaviour
 
             if (other.transform.CompareTag("GreenDoor"))
             {
-
-                playerManager.AddMultipleBalls(other.gameObject);
+                playerManager.AddMultipleBalls(other.GetComponent<GreenGate>().health);
             }
         }
-      
 
         if (other.transform.CompareTag("RedDoor"))
         {
