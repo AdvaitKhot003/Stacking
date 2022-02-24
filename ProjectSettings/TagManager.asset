@@ -6,8 +6,8 @@ TagManager:
   tags:
   - TouchArea
   - Ball
-  - Green
-  - Red
+  - GreenDoor
+  - RedDoor
   layers:
   - Default
   - TransparentFX
@@ -15,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - TouchArea
+  - 
   - 
   - 
   - 

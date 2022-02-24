@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6592489926380956052}
   - component: {fileID: 6592489926380956053}
   - component: {fileID: 6592489926380956042}
-  - component: {fileID: 6592489926380956043}
+  - component: {fileID: 6353814759055231245}
   m_Layer: 0
   m_Name: NewBall
   m_TagString: Player
@@ -58,7 +58,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -83,7 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &6592489926380956053
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -113,7 +111,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &6592489926380956043
+--- !u!114 &6353814759055231245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,6 +120,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6592489926380956040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3626fd51570acf448ae556a7458d25c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3257a31924af94ddea9409da7a4205e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
+  isUsed: 0
