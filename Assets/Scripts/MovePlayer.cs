@@ -106,7 +106,7 @@ public class MovePlayer : MonoBehaviour
 
     public void MoveCamera()
     {
-        mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z - 0.8f);
+        mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z - 0.5f);
     }
 
     private IEnumerator DragUpdate()

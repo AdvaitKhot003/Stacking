@@ -40,9 +40,9 @@ public class PlayerManager : MonoBehaviour
                 if (desiredDistance <= ballDistance)
                 {
                     back.position = new Vector3(Mathf.Lerp(
-                        back.position.x, front.position.x, 10 * Time.deltaTime),
+                        back.position.x, front.position.x, 15 * Time.deltaTime),
                         back.position.y,
-                        Mathf.Lerp(back.position.z, front.position.z - 0.8f, 20 * Time.deltaTime));
+                        Mathf.Lerp(back.position.z, front.position.z - 0.5f, 15 * Time.deltaTime));
                 }
             }
         }
